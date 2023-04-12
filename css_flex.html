@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS_flex</title>
+</head>
+<body>
+    <h1>Flex_레이아웃속성</h1>
+    <p>flex 레이아웃은 부모자에 flex를 선언하고, 자식요소를 유연하게 배치하는 속성</p>
+    <p>
+        ul > li의 경우, ul에게 flex를 선언하면 li가 가로정렬됨<br>
+        이때 li는 item의 속성을 사용
+    </p>
+
+    <table border="1">
+        <tr>
+            <td colspan="2">flex _ container 속성</td>
+        </tr>
+        <tr>
+            <td>속성명</td>
+            <td>속성값과 의미</td>
+        </tr>
+        <tr>
+            <td>display</td>
+            <td>flex - 자손자를 flex로 정렬하겠다는 선언문</td>
+        </tr>
+        <tr>
+            <td>justify-content</td>
+            <td>수평정렬에 관한 설정
+                <ul>
+                    <li>flex-start : 시작점에서부터 정렬(기본값)</li>
+                    <li>flex-end : 끝점에서 정렬</li>
+                    <li>center : item을 부모자의 가운데 정렬</li>
+                    <li>space-between : 처음 item은 시작점에 붙고, 마지막 item은 끝점에 붙인 상태에서 나머지 item을 사이 정렬</li>
+                    <li>space-around : 모든 item들의 좌우여백값 통일</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>align-items</td>
+            <td>item들의 상하여백 정렬(부모자의 높이가 지정되어 있고 아이템들은 부모자 높이값보다 양이 적을 때 사용)
+                <ul>
+                    <li>stretch : item들의 위아래 맞춤(기본값)</li>
+                    <li>flex-start : item들을 위로 붙임</li>
+                    <li>flex-end : item들을 아래로 붙임</li>
+                    <li>center : item을 부모 기준으로 가운데 정렬</li>
+                    <li>space-between : 처음 item은 시작점에 붙고, 마지막 item은 끝점에 붙인 상태에서 나머지 item을 사이 정렬(상하기준)</li>
+                    <li>space-around : 모든 item들의 상하여백값 통일</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>flex-direction</td>
+            <td>column (위에서 아래로 수직정렬)<br>
+                row (왼쪽에서 오른쪽으로 수평정렬)<br>
+                + reverse를 활용하여 역방향 가능(column-reverse / row-reverse)</td>
+        </tr>
+        <tr>
+            <td>flex-wrap</td>
+            <td>기본적으로 flex는 자손자를 한 줄에만 표시하려하므로 자손자의 크기는 무시하고 공간에 가둔다.
+                그래서 줄바꿈을 이루어 표기하려면 wrap으로 묶어준다. <strong>flex-wrap:wrap</strong><br>
+                wrap / no-wrap(기본값) / wrap-reverse</td>
+        </tr>
+        <tr>
+            <td colspan="2">flex _ item 속성(자손자에 표기)</td>
+        </tr>
+        <tr>
+            <td>order</td>
+            <td>item의 순서를 설정한다.<br>
+            음수까지 허용하며, 숫자가 높을수록 뒤로 밀림 / 기본값이 0</td>
+        </tr>
+        <tr>
+            <td>flex-grow</td>
+            <td>증가너비 비율</td>
+        </tr>
+        <tr>
+            <td>flex-shrink</td>
+            <td>감소너비 비율, 숫자가 크면 더 많은 너비가 감소한다.</td>
+        </tr>
+        <tr>
+            <td>flex-basis</td>
+            <td>item 배분너비, 기본값(auto), width값으로 잘 설정하지 않음</td>
+        </tr>
+        <tr>
+            <td>flex</td>
+            <td>grow shrink basis 순서로 기본값 0 0 auto</td>
+        </tr>
+        <tr>
+            <td>align-self</td>
+            <td>item에게 각자지정이 가능하며, align-item의 세분화 작업<br>
+                align-items의 값을 재세팅 가능하다.</td>
+        </tr>
+    </table>
+
+
+
+<style>
+    div {border: 1px #000 solid;
+        padding: 10px;
+        background-color: lavender;
+        margin-bottom: 10px;}
+    div p {margin: 0;
+        border: 1px #000 solid;
+        padding: 10px;
+        background-color: pink;}
+</style>
+
+
+
+<h3>flex에서의 정렬방식 예제</h3>
+
+
+<span>정렬1~3을 가운데로 모이게 하는 방식 - 부모값 정의</span>
+<div class="f1">
+    <p>정렬1</p>
+    <p>정렬2</p>
+    <p>정렬3</p>
+</div>
+
+
+<span>정렬1~3의 크기를 모두 같게 만드는 방식 - 부모값 정의</span>
+<div class="f2">
+    <p>정렬1</p>
+    <p>정렬2</p>
+    <p>정렬3</p>
+</div>
+
+
+<span>부모의 높이가 클 때 위아래를 꽉 채우는 방식</span>
+<div class="f3">
+    <p>정렬1</p>
+    <p>정렬2</p>
+    <p>정렬3</p>
+</div>
+
+
+<span>정렬1의 크기를 2,3과 다르게 만들기</span>
+<div class="f4">
+    <p>정렬1</p>
+    <p>정렬2</p>
+    <p>정렬3</p>
+</div>
+
+
+<div class="f5">
+    <p>정렬1</p>
+    <p>정렬2</p>
+    <p>정렬3</p>
+</div>
+
+<!-- 개인연습 -->
+<div class="f6">
+    <p>정렬1</p>
+    <p>정렬2</p>
+    <p>정렬3</p>
+</div>
+<div class="f7">
+    <p>정렬1</p>
+    <p>정렬2</p>
+    <p>정렬3</p>
+</div>
+
+
+
+<style>
+    .f1 {display: flex;
+        justify-content: center;}
+
+    .f2 {display: flex;}
+    .f2 p {flex: 1 0 auto;}
+    /* flex-grow의 값을 1로 변환 */
+
+    .f3 {height: 150px;
+        display: flex;}
+        /* 자손 안에 자손 */
+    .f3 p {display: flex;
+        flex-grow: 1;
+        justify-content: center;
+        align-items: center;}
+
+    .f4 {display: flex;
+        width: 100%}
+    .f4 p:nth-child(1) {width: 60%;}
+    .f4 p:nth-child(2) {flex-grow: 1;}
+
+    .f5 {height: 400px;
+        display: flex;
+        align-items: flex-end;}
+    .f5 p:nth-child(1) {align-self: start;}
+    .f5 p:nth-child(2) {align-self: center;}
+
+    .f6 {display: flex;
+        justify-content: space-around;}
+
+    .f7 {display: flex;
+        justify-content: space-between;}
+    .f7 p:nth-child(1) {order: 2;}
+    .f7 p:nth-child(2) {order: 3;}
+
+
+
+    .gnb {list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        background-color: #000;
+        height: 100px;
+        color: #fff;
+        justify-content: space-around;
+        position: fixed;
+        bottom: 0;
+        width: 100%;}
+    .gnb li {padding: 20px;
+            display: flex;
+            align-items: center;}
+</style>
+
+
+<span>menu 제작 샘플</span>
+<ul class="gnb">
+    <li>menu1</li>
+    <li>menu2</li>
+    <li>menu3</li>
+    <li>menu4</li>
+    <li>menu5</li>
+    <li>menu6</li>
+</ul>
+
+
+
+
+</body>
+</html>

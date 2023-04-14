@@ -42,18 +42,58 @@ a {text-decoration: none;
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
-    
+
         margin-top: 120px;}
 
-        /* 비주얼 내부에 이미지 이동하기 */
-        .visual {position: relative;
-                z-index: 1;}
 
-        .love {position: absolute;
-                top: 40%;
-                left: 150px;}
+/* 비주얼 내부의 이미지 이동하기 */
+.visual {position: relative;
+        z-index: 1;}
 
-        
+.love {position: absolute;
+        top: 40%;
+        left: 250px;}
+
+.drink1 {position: absolute;
+        left: 49.5%;
+        bottom: 10%;}
+
+.drink2 {position: absolute;
+        left: 50%;
+        margin-left: -320px;
+        top: 10%;}
+
+.drink3 {position: absolute;
+        left: 50%;
+        margin-left: 200px;
+        top: 11% ;}
+
+
+/* 비주얼 이하 이미지 이동 */
+
+.rewards {position: relative;}
+.rewardslogo {position: absolute;
+                top: 15%;
+                left: 23%;}
+
+.season {position: relative;}
+.seasonimg {position: absolute;
+                top: 5%;
+                left: 25%;}
+.seasontxt {position: absolute;
+        top: 35%;
+        right: 25%;}
+
+.costa {position: relative;}
+.costatxt {position: absolute;
+        top: 8%;
+        left: 33%;}
+.costaimg {height: 320px;
+        position: absolute;
+        right: 10%;
+        bottom: 1%;}
+
+
 
 
 /* 텍스트박스 설정 */

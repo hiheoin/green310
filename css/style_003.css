@@ -59,4 +59,106 @@ a {text-decoration: none; color: #000;}
 
 
 
+/* position 예제 */
+.box004 {background-color: cadetblue;
+        display: flex;
+        height: 200px;
+        position: relative;
+        z-index: 100;}
 
+.box004 p {width: 200px;
+        height: 200px;
+        border: 1px solid #000;}
+
+.box004 p:nth-child(1) {position: relative;}
+.box004 p:nth-child(2) {position: absolute;
+                        left: 200px;
+                        top: 0px;}
+.box004 p:nth-child(3) {position: fixed;
+                        top: 0;
+                        left: 0;}
+
+
+
+.box005 {background-color: skyblue;
+        height: 500px;
+        margin-top: 20px;
+        position: relative;}
+
+.box005 p:nth-child(1) {width: 200px;
+                        height: 200px;
+                        background-color: azure;
+                        position: absolute;
+                        left: 50%;
+                        margin-left: -100px;
+                        top: 50%;
+                        margin-top: -100px;}
+.box005 p:nth-child(2) {width: 200px;
+                        height: 200px;
+                        background-color: slategrey;
+                        position: absolute;
+                        right: 50px;
+                        bottom: 50px;}
+
+.box005 p:nth-child(2) span {position: absolute;
+                        left: 50%;
+                        top: 50%;}
+
+.box005 p:nth-child(3) {width: 200px;
+                        height: 200px;
+                        background-color: lightyellow;
+                        position: fixed;
+                        bottom: 0;
+                        right: 0;}
+
+
+
+/* z-index 속성 예제 */
+
+.box006 {width: 400px;
+        height: 400px;
+        background-color: #ccc;
+        position: relative;}
+
+.box006 p:nth-child(1) {width: 200px;
+                        height: 200px;
+                        background-color: indianred;
+                        position: absolute;
+                        z-index: 3;}
+
+.box006 p:nth-child(2) {width: 200px;
+                        height: 200px;
+                        background-color: yellowgreen;
+                        position: absolute;
+                        left: 50px;
+                        top: 50px;
+                        z-index: 2;}
+
+.box006 p:nth-child(3) {width: 200px;
+                        height: 200px;
+                        background-color: steelblue;
+                        position: absolute;
+                        left: 100px;
+                        top: 100px;
+                        z-index: 1;}
+/* z-index의 마이너스값(-1)은 부모자 뒤로 내려간다. */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {height: 3000px;}

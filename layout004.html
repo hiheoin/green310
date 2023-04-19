@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃004</title>
+    <link rel="stylesheet" href="css/grid-guide.css">
+</head>
+<body>
+    
+<div class="box1">
+    <div class="box1-1">로고</div>
+    <div class="box1-2">메뉴</div>
+</div>
+
+<div class="box2">이미지슬라이드</div>
+
+<div class="box3">
+    <div class="box3-1">공지사항</div>
+    <div class="box3-2">배너</div>
+    <div class="box3-3">바로가기</div>
+</div>
+
+<div class="box4">
+    <div class="box4-1">하단로고</div>
+    <div class="box4-2">
+        <div class="box4-2-1">하단메뉴</div>
+        <div class="box4-2-2">Copyright</div>
+    </div>
+</div>
+
+
+<style>
+    body {margin: 0;}
+
+/* flex 방식 */
+    .box1 {display: flex;}
+    .box1-1 {width: 20%;}
+    .box1-2 {width: 80%;}
+
+    .box3 {display: flex;}
+    .box3 div {flex-grow: 1;}
+
+    .box4 {display: flex;}
+    .box4-1 {width: 20%;}
+    .box4-2 {width: 80%;}
+    
+
+/* 부모자에 after, float:left 방식 */
+
+    /* .box1:after {content: "";
+                display: block;
+                clear: both;}
+    .box1-1 {float: left;
+            width: 20%;}
+    .box1-2 {float: left;
+            width: 80%;}
+
+    .box3:after {content: "";
+                display: block;
+                clear: both;}
+    .box3-1 {float: left;}
+    .box3-2 {float: left;}
+    .box3-3 {float: left;}
+
+    .box4:after {content: "";
+                display: block;
+                clear: both;}
+    .box4-1 {float: left;
+            width: 20%;}
+    .box4-2 {float: left;
+            width: 80%;} */
+
+</style>
+
+
+<!-- 선생님과 함께 -->
+<h2>with T</h2>
+
+<div class="boxA">
+    <div class="boxA-1">로고</div>
+    <div class="boxA-2">메뉴</div>
+</div>
+
+<div class="boxB">이미지슬라이드</div>
+
+<div class="boxC">
+    <div class="boxC-1">공지사항</div>
+    <div class="boxC-2">배너</div>
+    <div class="boxC-3">바로가기</div>
+</div>
+
+<div class="boxD">
+    <div class="boxD-1">하단로고</div>
+    <div class="boxD-2">
+        <div class="boxD-2-1">하단메뉴</div>
+        <div class="boxD-2-2">Copyright</div>
+    </div>
+</div>
+
+<style>
+
+    /* flex 설정 */
+    /* .boxA {display: flex;}
+    .boxA-1 {width: 20%;}
+    .boxA-2 {width: 80%;}
+
+    .boxC {display: flex;}
+    .boxC div {flex-grow: 1;}
+
+    .boxD {display: flex;}
+    .boxD-1 {width: 20%;}
+    .boxD-2 {width: 80%;} */
+
+
+    /* 부모자에 after, float:left 설정 */
+    .boxA:after {content: "";
+                display: block;
+                clear: both;}
+    .boxA-1 {float: left;
+            width: 20%;}
+    .boxA-2 {float: left;
+            width: 80%;}
+
+    .boxC:after {content: "";
+                display: block;
+                clear: both;}
+    .boxC div {float: left;
+            width: 33.3333%;}
+    /* 소수점 4자리까지 쓰면 됨 */
+
+    .boxD {height: 450px;}
+    .boxD:after {content: "";
+                display: block;
+                clear: both;}
+    .boxD-1 {float: left;
+            width: 20%;
+            height: 100%;}
+    .boxD-2 {float: left;
+            width: 80%;
+            height: 100%;}
+    .boxD-2 div {height: 50%;}
+    /* boxD-1에게 height 100%을 주기 위해서 
+    임의로 boxD에 450px 주고,
+    boxD-2에도 100% 준 것 &  boxD-2 div에도 50%*/
+
+
+</style>
+
+
+</body>
+</html>

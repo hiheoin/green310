@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃002</title>
+<link rel="stylesheet" href="css/grid-guide.css">
+
+</head>
+<body>
+
+
+    <div class="box1">박스1</div>
+    
+    <div class="box2">    
+        <div class="box2-1">박스2-1</div>
+        <div class="box2-2">박스2-2</div>
+    </div>
+
+    <div class="box3">박스3</div>
+
+    <div class="box4">
+        <div class="box4-1">박스4-1</div>
+        <div class="box4-2">박스4-2</div>
+        <div class="box4-3">박스4-3</div>
+    </div>
+    
+<style>
+
+    body {margin: 0;}
+
+    .box2 {display: flex;}
+    .box2-1 {width: 50%;}
+    .box2-2 {width: 50%;}
+
+    .box4 {display: flex;}
+    .box4-1 {width: 20%;}
+    .box4-2 {width: 60%;}
+    .box4-3 {width: 20%;}
+
+</style>
+
+
+<h2>float</h2>
+
+    <div class="box1-A">박스1</div>
+    
+    <div class="box2-A">    
+        <div class="box2-A-1">박스2-1</div>
+        <div class="box2-A-2">박스2-2</div>
+    </div>
+
+    <div class="box3-A">박스3</div>
+
+    <div class="box4-A">
+        <div class="box4-A-1">박스4-1</div>
+        <div class="box4-A-2">박스4-2</div>
+        <div class="box4-A-3">박스4-3</div>
+    </div>
+
+<style>
+
+    .box2-A-1 {width: 50%;
+                float: left;}
+    .box2-A-2 {width: 50%;
+                float: left;}
+    .box2-A:after {content: "";
+                display: block;
+                clear: both;}
+
+    .box4-A-1 {width: 20%;
+                float: left;}
+    .box4-A-2 {width: 60%;
+                float: left;}
+    .box4-A-3 {width: 20%;
+                float: left;}
+    .box4-A:after {content: "";
+                display: block;
+                clear: both;}
+
+</style>
+
+
+
+<!-- 선생님과 함께 -->
+<h2>with T</h2>
+
+
+    <div class="boxQ">박스1</div>
+
+    <div class="boxW">
+        <div class="boxW-1">박스2-1</div>
+        <div class="boxW-2">박스2-2</div>
+    </div>
+
+    <div class="boxE">박스3</div>
+
+    <div class="boxR">
+        <div class="boxR-1">박스4-1</div>
+        <div class="boxR-2">박스4-2</div>
+        <div class="boxR-3">박스4-3</div>
+    </div>
+
+
+    <style>
+
+    /* 박스W 설정 */
+    /* 부모자 after 정렬 방식, float:left 활용 */
+    /* .boxW:after {content: "";
+                display: block;
+                clear: both;}
+    .boxW-1 {float: left;
+            width: 50%;}
+    .boxW-2 {float: left;
+            width: 50%;} */
+
+    /* 박스R 설정 */
+    /* 부모자 after 정렬 방식, float:left 활용 */
+    /* .boxR:after {content: "";
+                display: block;
+                clear: both;}
+    .boxR-1 {float: left;
+            width: 20%;}
+    .boxR-2 {float: left;
+            width: 60%;}
+    .boxR-3 {float: left;
+            width: 20%;} */
+
+    /* 부모자에 flex 방식 */
+
+    /* 박스W 설정 */
+
+    .boxW {display: flex;}
+    .boxW div {flex-grow: 1;}
+
+    /* 박스R 설정 */
+    .boxR {display: flex;}
+    .boxR-1 {width: 20%;}
+    .boxR-2 {width: 60%;}
+    .boxR-3 {width: 20%;}
+
+    </style>
+
+
+
+
+
+</body>
+</html>

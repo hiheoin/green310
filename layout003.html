@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃003</title>
+    <link rel="stylesheet" href="css/grid-guide.css">
+</head>
+<body>
+
+    <div class="boxH">header</div>
+
+    <div class="boxN">nav</div>
+    
+    <section class="boxA">
+        <section class="box1">
+            <article class="box1-1">section</article>
+            <article class="box1-2">article</article>
+        </section>
+        <aside class="box2">aside</aside>
+    </section>
+
+    <div class="boxB">footer</div>
+
+
+    <style>
+        body {margin: 0;}
+
+        .boxA {display: flex;}
+        .box1 {width: 70%;}
+        .box2 {width: 30%;
+                height: 50%;}
+
+    </style>
+
+
+
+<h2>float</h2>
+
+<div class="boxH-1">header</div>
+
+    <div class="boxN-1">nav</div>
+    
+    <section class="boxA-1">
+        <section class="box1-A">
+            <article class="box1-A-1">section</article>
+            <article class="box1-A-2">article</article>
+        </section>
+        <aside class="box2-A">aside</aside>
+    </section>
+
+    <div class="boxB-1">footer</div>
+
+<style>
+
+    .box1-A {width: 70%;
+            float: left;}
+    .box2-A {width: 30%;
+            float: left;}
+    .boxA-1:after {content: "";
+                display: block;
+                clear: both;}
+
+</style>
+
+
+<!-- 선생님과 함께 -->
+<h2>with T</h2>
+
+    <div class="boxQ">header</div>
+
+    <div class="boxW">nav</div>
+
+    <div class="boxE">
+        <div class="boxE-1">
+            <div class="boxE-1-1">section</div>
+            <div class="boxE-1-2">article</div>
+        </div>
+        <div class="boxE-2">aside</div>
+    </div>
+
+    <div class="boxR">footer</div>
+
+
+    <style>
+
+    /* 박스E 설정 */
+    
+    /* 부모에 after 정렬, float:left 사용 */
+    /* .boxE:after {content: "";
+                display: block;
+                clear: both;}
+    .boxE-1 {float: left;
+            width: 70%;}
+    .boxE-2 {float: left;
+        width: 30%;} */
+
+
+    /* flex 방식 */
+    .boxE {display: flex;
+            align-items: flex-start;}
+    .boxE-1 {width: 70%;}
+    .boxE-2 {width: 30%;}
+
+    </style>
+
+
+
+    
+</body>
+</html>

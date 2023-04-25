@@ -1,0 +1,135 @@
+
+@charset 'utf-8';
+
+/* 전체설정 */
+* {margin: 0;
+    padding: 0;}
+ul,ol {list-style: none;}
+a {color: #000;
+    text-decoration: none;}
+
+            /* 영어 폰트 안 썼음 */
+body {font-family: '맑은 고딕', sans-serif;}
+
+/* 박스3과 박스4 가로정렬 */
+.boxA {display: flex;}
+.box3 {width: 70%;}
+.box4 {width: 30%;}
+
+/* 로고 설정 */
+.logo {}
+.logo h1 {font-size: 30px;
+        font-weight: bold;}
+.logo h1 a {}
+
+
+/* 메뉴 설정 */
+.menu {}
+.menu ul {display: flex;}
+.menu ul li {}
+            /* a태그에 display 안 썼음 */
+.menu ul li a {display: block;
+                padding: 15px;
+                font-size: 14px;}
+.menu ul li a:hover {background-color: #75dbe7;}
+
+
+/* 기사 설정 */
+.story {}
+.story h1 {font-size: 36px;
+        font-weight: bold;
+        margin-bottom: 20px;}
+            /* max-width 안 썼음 */
+.story img {max-width: 100%;}
+.story p {margin-top: 10px;
+        margin-bottom: 20px;}
+.story h2 {font-size: 24px;
+            font-weight: normal;
+            border-left: solid 10px #7cbac1;
+            margin-top: 40px;
+            padding-left: 10px;}
+
+
+/* 특집 기사 설정 */
+.sidemenu {margin-bottom: 30px;}
+.sidemenu h1 {border-bottom: 2px dotted #ddd;
+            font-size: 18px;
+            font-weight: bold;
+            color:#666;
+            margin-bottom: 10px;}
+.sidemenu ul {}
+.sidemenu ul li {}
+            /* a태그에 display 안 썼음 */
+.sidemenu ul li a {display: block;
+                font-size: 14px;
+                padding: 5px;}
+/* .sidemenu ul li a:hover {background-color: #eee;} */
+
+
+/* 추천 기사 설정 */
+.recommend {margin-bottom: 30px;}
+.recommend h1 {border-bottom: 2px dotted #ddd;
+            font-size: 18px;
+            font-weight: bold;
+            color:#666;
+            margin-bottom: 10px;}
+.recommend ul {}
+.recommend ul li {}
+            /* a태그에 display 안 썼음 */
+.recommend ul li a {display: block;
+                font-size: 14px;
+                padding: 5px;}
+/* .recommend ul li a:hover {background-color: #eee;} */
+
+
+/* 인기 기사 설정 */
+.popular {}
+.popular h1 {border-bottom: 2px dotted #ddd;
+            font-size: 18px;
+            font-weight: bold;
+            color:#666;
+            margin-bottom: 10px;}
+.popular ul {}
+.popular ul li {}
+            /* a태그에 display 안 썼음 */
+.popular ul li a {display: block;
+                font-size: 14px;
+                padding: 5px;}
+/* .popular ul li a:hover {background-color: #eee;}  */
+
+
+/* 카피라이트 설정 */
+.copyright {color: #666;
+            font-size: 14px;
+            /* 패딩값 나중에 줘도 됨 */
+            padding-top: 15px;}
+
+
+/* 박스2 배경색 설정 */
+.box2 {background-color: #7cbac1;}
+
+
+/* 박스5 위에 선 */
+.box5 {border-top: solid 1px #ddd;}
+
+
+/* 박스 상하여백 */
+.box1 {padding-top: 10px;
+    padding-bottom: 10px;}
+.box3 {padding-top: 40px;
+    padding-bottom: 40px;}
+.box4 {padding-top: 40px;
+    padding-bottom: 40px;}
+.box5 {padding-bottom: 15px;}
+
+
+/* 박스3과 박스4 좌우여백 */
+.box3 {padding-right: 50px;
+            /* box-sizing 안 썼음 */
+    box-sizing: border-box;}
+
+
+/* 화면에 크기설정 및 가운데 배치 */
+.box1,.boxA,.copyright,.menu {width: 1000px;
+                            margin: 0 auto;}
+

@@ -1,5 +1,5 @@
-
-@charset 'utf-8';
+@charset 'UTF-8';
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
 
 /* 전체설정 */
 * {margin: 0;
@@ -7,6 +7,8 @@
 ul,ol {list-style: none;}
 a {text-decoration: none;
         color: #000;}
+img {border: none;
+        vertical-align: bottom;}
 
 body {font-family: '맑은 고딕','Apple SD Gothic Neo',sans-serif;}
 
@@ -19,9 +21,10 @@ body {font-family: '맑은 고딕','Apple SD Gothic Neo',sans-serif;}
 
 /* 로고 설정 */
 .logo {}
-.logo h1 {font-weight: bold;
-        font-size: 30px;}
-.loho h1 a {}
+.logo h1 {font-weight: normal;
+        font-size: 30px;
+        font-family: 'Paytone One', sans-serif;}
+.logo h1 a {color: #83a4a8;}
 
 
 /* 메뉴 설정 */
@@ -49,6 +52,68 @@ body {font-family: '맑은 고딕','Apple SD Gothic Neo',sans-serif;}
         font-weight: normal;}
 
 
+/* 기사의 작성일 설정 */
+.storyinfo {margin-top: -10px;
+        margin-bottom: 20px;}
+.storyinfo i {color: #aaa;
+        font-size: 18px;}
+.storyinfo time {}
+
+
+/* 기사의 카테고리 설정 */
+.story-cat {margin-bottom: 25px;}
+.story-cat ul {display: flex;}
+.story-cat ul li {margin-right: 5px;}
+.story-cat ul li a {display: block;
+                background-color: #75dbe7;
+                font-size: 12px;
+                color: #fff;
+                padding: 3px 5px;
+                border-radius: 2px;}
+
+
+/* SNS 공유 설정 */
+.snsSet {margin-top: 40px;}
+.snsSet ul {display: flex;}
+.snsSet ul li {width: 33.3333%;
+/* flex-grow 1로 하면 정확한 3분의 1이 안 나옴 */
+}
+.snsSet ul li a {display: block;
+                text-align: center;
+                padding: 5px;
+                font-size: 14px;
+                color: #fff;}
+
+.snsSet ul li:nth-child(1) a {background-color: #1da1f2;}
+.snsSet ul li:nth-child(2) a {background-color: #1877f2;}
+.snsSet ul li:nth-child(3) a {/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#833ab4+0,e1306c+35,f77737+64,ffdc80+93,ffdc80+93 */
+        background: #833ab4; /* Old browsers */
+        background: -moz-linear-gradient(left,  #833ab4 0%, #e1306c 35%, #f77737 64%, #ffdc80 93%, #ffdc80 93%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(left,  #833ab4 0%,#e1306c 35%,#f77737 64%,#ffdc80 93%,#ffdc80 93%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right,  #833ab4 0%,#e1306c 35%,#f77737 64%,#ffdc80 93%,#ffdc80 93%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#833ab4', endColorstr='#ffdc80',GradientType=1 ); /* IE6-9 */}
+
+
+/* 관련기사 설정 */
+.relation {background-color: #f0f0d4;
+                padding: 20px;
+                margin-top: 40px;}
+.relation h1 {color: #727224;
+                font-size: 20px;
+                font-weight: normal;
+                margin-bottom: 5px;}
+.relation ul {display: flex;
+        /* 모바일로 바뀔 때 사진 두 개씩 한 줄 배치 - 밑에 와이드 50%, 랩으로 묶기 */
+                flex-wrap: wrap;}
+.relation ul li {width: 25%;}
+.relation ul li a {display: block;
+                padding: 5px;
+                font-size: 14px;}
+
+.relation img {max-width: 100%;}
+.relation .txt {}
+
+
 /* 특집기사 설정 */
 .sidemenu {margin-bottom: 30px;}
 .sidemenu h1 {font-weight: bold;
@@ -62,6 +127,10 @@ body {font-family: '맑은 고딕','Apple SD Gothic Neo',sans-serif;}
                 padding: 5px;
                 font-size: 14px;}
 
+/* 특집기사 아이콘 설정 */
+.sidemenu i {color: #888;
+                margin-right: 5px;}
+
 
 /* 추천기사 설정 */
 .recommend {margin-bottom: 30px;}
@@ -71,10 +140,23 @@ body {font-family: '맑은 고딕','Apple SD Gothic Neo',sans-serif;}
         border-bottom: 2px dotted #ddd;
         margin-bottom: 10px}
 .recommend ul {}
-.recommend ul li {}
+.recommend ul li {margin-bottom: 10px;}
 .recommend ul li a {display: block;
-                padding: 5px;
-                font-size: 14px;}
+                font-size: 14px;
+                position: relative;}
+
+.recommend img {max-width: 100%;
+                /* 처음부터 형태가 있는 이미지,비디오,아이콘에만 적용 가능한 vertical-align */
+                vertical-align: top;}
+.recommend .txt {background-color: rgba(0, 0, 0, 0.8);
+        /* opacity 태그로 하면 글씨까지 흐려짐! */
+                color: #fff;
+                padding: 5px 10px;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                box-sizing: border-box;}
 
 
 /* 인기기사 설정 */
@@ -88,7 +170,25 @@ body {font-family: '맑은 고딕','Apple SD Gothic Neo',sans-serif;}
 .popular ul li {}
 .popular ul li a {display: block;
                 padding: 5px;
+                font-size: 14px;
+                border-bottom: dotted 1px #ddd;
+                color: #2288bb;
                 font-size: 14px;}
+
+.popular a:after {content: "";
+                display: block;
+                clear: both;}
+.popular img {border: none;
+                float: left;
+                width: 60px;}
+.popular .txt {float: none;
+                width: auto;
+                padding-left: 15px;
+                /* float none 때문에 시작점을 모름, 시작점 잡기 위해 마집 레프트 (사진이 60이었으니까) */
+                margin-left: 60px;}
+.popular span {color: #666;
+                font-size: 12px;
+                display: block;}
 
 
 /* 카피라이트 설정 */

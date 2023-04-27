@@ -1,5 +1,7 @@
 
 @charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+
 
 /* 전체설정 */
 * {margin: 0;
@@ -19,8 +21,9 @@ body {font-family: '맑은 고딕', sans-serif;}
 /* 로고 설정 */
 .logo {}
 .logo h1 {font-size: 30px;
-        font-weight: bold;}
-.logo h1 a {}
+        font-weight: normal;
+        font-family: 'Paytone One', sans-serif;}
+.logo h1 a {color: #83a4a8;}
 
 
 /* 메뉴 설정 */
@@ -49,6 +52,61 @@ body {font-family: '맑은 고딕', sans-serif;}
             margin-top: 40px;
             padding-left: 10px;}
 
+/* 기사 카테고리 설정 */
+.story-cat {margin-bottom: 25px;}
+.story-cat ul {display: flex;}
+.story-cat ul li {margin-right: 5px;}
+.story-cat ul li a {background-color: #75dbe7;
+                font-size: 12px;
+                padding: 3px 5px;
+                color: #fff;
+                border-radius: 2px;}
+
+/* 기사 날짜 설정 */
+.storyinfo {margin-top: -10px;
+            margin-bottom: 20px;}
+.storyinfo i {font-size: 18px;
+            color: #aaa;}
+.storyinfo time {}
+
+
+/* sns 공유 설정 */
+.snsSet {margin-top: 40px;}
+.snsSet ul {display: flex;}
+.snsSet ul li {width: 33.3333%;}
+.snsSet ul li a {display: block;
+                color: #fff;
+                padding: 5px;
+                text-align: center;
+                font-size: 14px;}
+
+.snsSet ul li:nth-child(1) a {background-color: #1da1f2;}
+.snsSet ul li:nth-child(2) a {background-color: #1877f2;}
+.snsSet ul li:nth-child(3) a {/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#833ab4+0,e1306c+35,f77737+64,ffdc80+93,ffdc80+93 */
+    background: #833ab4; /* Old browsers */
+    background: -moz-linear-gradient(left,  #833ab4 0%, #e1306c 35%, #f77737 64%, #ffdc80 93%, #ffdc80 93%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #833ab4 0%,#e1306c 35%,#f77737 64%,#ffdc80 93%,#ffdc80 93%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  #833ab4 0%,#e1306c 35%,#f77737 64%,#ffdc80 93%,#ffdc80 93%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#833ab4', endColorstr='#ffdc80',GradientType=1 ); /* IE6-9 */}
+
+
+/* 관련 기사 설정 */
+.relation {background-color: #f0f0d4;
+            padding: 20px;
+            margin-top: 40px;}
+.relation h1 {font-size: 20px;
+            font-weight: normal;
+            color: #727224;
+            margin-bottom: 5px;}
+.relation ul {display: flex;}
+.relation ul li {width: 25%;}
+.relation ul li a {display: block;
+                padding: 5px;
+                font-size: 14px;}
+
+.relation img {max-width: 100%;}
+.relation .txt {}
+
 
 /* 특집 기사 설정 */
 .sidemenu {margin-bottom: 30px;}
@@ -65,6 +123,10 @@ body {font-family: '맑은 고딕', sans-serif;}
                 padding: 5px;}
 /* .sidemenu ul li a:hover {background-color: #eee;} */
 
+.sidemenu i {color: #888;
+            margin-right: 5px;}
+
+
 
 /* 추천 기사 설정 */
 .recommend {margin-bottom: 30px;}
@@ -74,12 +136,23 @@ body {font-family: '맑은 고딕', sans-serif;}
             color:#666;
             margin-bottom: 10px;}
 .recommend ul {}
-.recommend ul li {}
+.recommend ul li {margin-bottom: 10px;}
             /* a태그에 display 안 썼음 */
 .recommend ul li a {display: block;
                 font-size: 14px;
-                padding: 5px;}
-/* .recommend ul li a:hover {background-color: #eee;} */
+                position: relative;}
+
+
+.recommend img {max-width: 100%;
+                vertical-align: top;}
+.recommend .txt {background-color: rgba(0, 0, 0, 0.8);
+                color: #fff;
+                padding: 5px 10px;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                box-sizing: border-box;}
 
 
 /* 인기 기사 설정 */
@@ -94,8 +167,25 @@ body {font-family: '맑은 고딕', sans-serif;}
             /* a태그에 display 안 썼음 */
 .popular ul li a {display: block;
                 font-size: 14px;
-                padding: 5px;}
+                padding: 5px;
+                border-bottom: dotted 1px #ddd;
+                color: #2288bb;
+                font-size: 14px;}
 /* .popular ul li a:hover {background-color: #eee;}  */
+
+.popular a:after {content: "";
+                display: block;
+                clear: both;}
+.popular img {border: none;
+                float: left;
+                width: 60px;}
+.popular .txt {float: none;
+                width: auto;
+                padding-left: 15px;
+                margin-left: 60px;}
+.popular span {font-size: 12px;
+                color: #666;
+                display: block;}
 
 
 /* 카피라이트 설정 */

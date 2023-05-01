@@ -1,0 +1,54 @@
+@charset 'utf-8';
+
+
+/* header 콘텐츠 */
+header {background-color: #fff;}
+header h1 {position: absolute;
+        width: 180px;
+        height: 136px;
+        background-image: url(../img/logo1.png);
+        /* 텍스트 멀리 보내기 빠짐 */
+        text-indent: -9999px;
+        left: 50%;
+        margin-left: -90px;
+        top: 70px;
+        background-size: contain;
+        background-repeat: no-repeat;}
+
+.gnb {position: absolute;
+        left: 40px;
+        top: 300px;}
+.gnb li {}
+.gnb li a {display: block;
+        padding: 8px 30px;
+        font-size: 17px;
+        font-weight: bold;
+        text-align: left;}
+.gnb li a i {margin-right: 15px;}
+            /* 처음에 마진 말고 패딩으로 썼음 */
+
+.snsSet {position: absolute;
+        bottom: 50px;
+        width: 90px;
+        height: 47px;
+        left: 50%;
+        margin-left: -45px;}
+        /* a에 float 안 써주면 안 됨 */
+.snsSet a {float: left;}
+
+
+/* nav 콘텐츠 */
+nav {position: relative;}
+nav a:nth-child(1) {position: absolute;
+                    left: 10px;
+                    top: 5px;}
+nav a:nth-child(2) {position: absolute;
+                    left: 150px;
+                    top: 5px;}
+nav a:nth-child(3) {position: absolute;
+                    right: 96px;
+                    top: 5px;}
+nav a:nth-child(4) {position: absolute;
+                    right: 10px;
+                    top: 5px;}
+/* 선택자 잘 보기!! 그냥 nav임 .nav 아님 */

@@ -13,10 +13,6 @@ a {color: #000;
             /* 영어 폰트 안 썼음 */
 body {font-family: '맑은 고딕', sans-serif;}
 
-/* 박스3과 박스4 가로정렬 */
-.boxA {display: flex;}
-.box3 {width: 70%;}
-.box4 {width: 30%;}
 
 /* 로고 설정 */
 .logo {}
@@ -213,13 +209,60 @@ body {font-family: '맑은 고딕', sans-serif;}
 .box5 {padding-bottom: 15px;}
 
 
+
+
+
+
+/* 박스들 좌우여백 공간 */
+.box1, .boxA, .copyright {padding-left: 10px;
+                        padding-right: 10px;}
+
+
+
+/* 미디어쿼리 구간 설정 //////////////////////////////// */
+
+
+/* 1. 모바일구간 */
+@media (max-width:599px) {
+
+/* css 설정 */
+
+}
+
+
+/* 2. 태블릿이하구간 */
+@media (min-width:600px) and (max-width:767px) {
+
+/* css 설정 */
+.box4 {display: flex;}
+.box4-1 {width: 50%;}
+.box4-2 {width: 50%;}
+
+    }
+
+/* 3. 태블릿~데스크탑구간 */
+@media (min-width:768px) {
+
+/* css 설정 */
+
+/* 박스3과 박스4 가로정렬 */
+.boxA {display: flex;}
+.box3 {width: 70%;}
+.box4 {width: 30%;}
 /* 박스3과 박스4 좌우여백 */
 .box3 {padding-right: 50px;
-            /* box-sizing 안 썼음 */
-    box-sizing: border-box;}
+    /* box-sizing 안 썼음 */
+box-sizing: border-box;}
+    
+    }
 
+/* 4. 일정공간 이상 가로값 변동없는 구간 */
+@media (min-width:1040px) {
 
+/* css 설정 */
+    
 /* 화면에 크기설정 및 가운데 배치 */
 .box1,.boxA,.copyright,.menu {width: 1000px;
-                            margin: 0 auto;}
+    margin: 0 auto;}
 
+    }

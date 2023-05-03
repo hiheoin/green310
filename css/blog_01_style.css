@@ -94,7 +94,8 @@ body {font-family: '맑은 고딕', sans-serif;}
             font-weight: normal;
             color: #727224;
             margin-bottom: 5px;}
-.relation ul {display: flex;}
+.relation ul {display: flex;
+                flex-wrap: wrap;}
 .relation ul li {width: 25%;}
 .relation ul li a {display: block;
                 padding: 5px;
@@ -226,6 +227,12 @@ body {font-family: '맑은 고딕', sans-serif;}
 @media (max-width:599px) {
 
 /* css 설정 */
+/* snsSet 설정 */
+.snsSet span {text-indent: -9999px;
+                display: inline-block;}
+/* 관련기사 설정 */
+.relation ul li {width: 50%;}
+.relation img {width: 100%;}
 
 }
 
@@ -253,7 +260,7 @@ body {font-family: '맑은 고딕', sans-serif;}
 .box3 {padding-right: 50px;
     /* box-sizing 안 썼음 */
 box-sizing: border-box;}
-    
+.sidemenu ul li a {font-size: 13px;}
     }
 
 /* 4. 일정공간 이상 가로값 변동없는 구간 */

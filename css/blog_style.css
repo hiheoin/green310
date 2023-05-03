@@ -226,8 +226,12 @@ body {font-family: '맑은 고딕','Apple SD Gothic Neo',sans-serif;}
 @media (max-width:599px) {
 
 /* css 설정구간 */
-
-
+/* snsSet 설정 */
+.snsSet span {text-indent: -9999px;
+                display: inline-block;}
+/* 관련기사 설정 */
+.relation ul li {width: 50%;}
+.relation img {width: 100%;}
 }
 
 

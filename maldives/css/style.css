@@ -52,3 +52,65 @@ nav a:nth-child(4) {position: absolute;
                     right: 10px;
                     top: 5px;}
 /* 선택자 잘 보기!! 그냥 nav임 .nav 아님 */
+
+
+/* article 내부 설정 */
+article div {width: 100%;
+                height: 100%;
+                position: relative;}
+
+/* article bg 설정 */
+article .bg {background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        overflow: hidden;}
+article .bg1 {background-image: url(../img/pic1.jpg);}
+article .bg2 {background-image: url(../img/pic2.jpg);}
+article .bg3 {background-image: url(../img/pic3.jpg);}
+article .bg4 {background-image: url(../img/pic4.jpg);}
+article .bg5 {background-image: url(../img/pic5.jpg);}
+article .bg6 {background-image: url(../img/pic6.jpg);}
+article .bg7 {background-image: url(../img/pic7.jpg);}
+article .bg span {font-size: 60px;
+                position: absolute;
+                bottom: 0;
+                right: 20px;
+                color: #fff;
+                transform: scale(10);
+                opacity: 0;
+                transition: all 0.6s;}
+article .bg:hover span {transform: scale(1);
+                        opacity: 1;}
+
+
+/* txt 영역 설정 */
+article .txt {color: #666;
+                padding: 40px 30px;
+                background-color: #fff;
+                box-sizing: border-box;
+                overflow: hidden;
+                transition: background-color 1s;}
+article .txt strong {display: block;
+                        font-size: 30px;}
+
+article .txt:hover {color: #fff;
+                background-color: #6ce2fb;}
+article .txt em {}
+
+article .txt i {font-size: 220px;
+                position: absolute;
+                right: -550px;
+                color: #b2effc;
+                transition: all 0.7s;
+                z-index: 0;}
+article .txt:hover i {right: 0;}
+article:nth-child(3) .txt i {right: 20px;}
+article:nth-child(3) .txt {background-color: #bff7fa;}
+article:nth-child(11) .txt {background-color: #e3f1fb;}
+
+article .txt p {position: relative
+        ;       z-index: 1;}
+
+
+
+

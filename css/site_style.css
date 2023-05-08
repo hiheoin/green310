@@ -1,0 +1,160 @@
+@charset 'utf-8';
+
+/* 전체설정 */
+* {margin: 0;
+    padding: 0;}
+ul,ol {list-style: none;}
+a {color: #000;
+    text-decoration: none;}
+img {border: none;
+    vertical-align: bottom;}
+
+body {font-family: '맑은고딕', 'Apple SD Gothic Neo', sans-serif;}
+
+
+/* 로고 설정 */
+.logo {}
+.logo a {}
+.logo a img {width: 250px;
+            height: 33px;}
+            /* html 태그 안에 인라인방식으로 css를 직접 기재해서 우선순위로 크기를 조정하게 만들어 둠 */
+.logo a:hover {}
+
+
+/* 메뉴 설정 */
+.menu {}
+.menu ul {}
+.menu ul li {}
+.menu ul li a {display: block;
+                padding: 10px 15px;
+                font-size: 14px;}
+.menu ul li a:hover {background-color: #eee;}
+
+
+/* 헤더 그림 설정 */
+.topimg {max-width: 100%;
+        height: auto;}
+
+
+/* 공지사항 설정 */
+.notice {}
+.notice ul {}
+.notice ul li {}
+.notice ul li a {display: block;
+                padding: 5px;
+                border-bottom: dotted 2px #ddd;}
+.notice ul li a:hover {}
+
+    /* 공지사항 내용이 날짜를 파고들지 않게 설정 */
+.notice a::after {content: "";
+                display: block;
+                clear: both;}
+.notice span {float: left;
+            width: 60px;
+            display: inline-block;}
+.notice .txt {float: none;
+            width: auto;
+            margin-left: 60px;}
+
+/* sns 설정 */
+.snsSet {}
+.snsSet ul {}
+.snsSet ul li {}
+.snsSet ul li a {display: block;
+                padding: 10px;
+                margin-bottom: 10px;
+                font-size: 14px;
+                background-color: #eee;
+                border-radius: 4px;}
+.snsSet ul li a:hover {}
+
+
+/* 카피라이트 설정 */
+.copyright {}
+.copyright p {font-size: 14px;
+            color: #666;}
+
+
+/* box5를 바 형태로 디자인하기 */
+.box5 {background-color: #ddd;
+        padding: 15px 0;}
+
+
+/* 박스 상하 여백 설정 */
+.boxA {padding-top: 20px;
+        padding-bottom: 10px;}
+.box4 {padding-top: 20px;
+        padding-bottom: 20px;}
+.box6 {padding-top: 20px;}
+
+
+/* 박스 좌우 여백 설정 */
+.boxA, .box4, .box5 {padding-left: 15px;
+                    padding-right: 15px;}
+
+
+
+
+
+
+
+/* 미디어쿼리 구간 설정 //////////////////////////// */
+
+/* 599px 이하 구간 설정 ////////// */
+@media(max-width:599px) {
+
+
+}
+
+
+
+
+/* 768px 이상 구간 설정 ////////// */
+@media(min-width:768px) {
+
+/* box1과 box2의 가로정렬 */
+.boxA {display: flex;
+        justify-content: space-between;
+        align-items: center;}
+.boxA>div {}
+
+/* 메뉴 설정 */
+.menu {}
+.menu ul {display: flex;}
+.menu ul li {}
+.menu ul li a {}
+.menu ul li a:hover {}
+
+/* 공지사항, snsSet 가로정렬 */
+.box4 {display: flex;}
+.box4>div:nth-child(1) {width: 70%;
+                        padding-right: 35px;
+                        /* 마진으로 할 거면 와이드값+마진값=70%가 되게 변경 */
+                        box-sizing: border-box;}
+.box4>div:nth-child(2) {width: 30%;}
+
+/* box6-1, box6-2, box6-3의 가로정렬 */
+.box6 {display: flex;}
+.box6>div {width: 32%;}
+    /* 32%로 주고 저스티파이콘텐츠 스페이스비트윈 줘도 됨 */
+.box6-1, .box6-2 {margin-right: 2%;}
+
+}
+
+
+
+
+/* 1190px 이상일 때 ////////// */
+@media(min-width:1190px) {
+
+    /* 레이아웃의 전체너비를 고정하고 가운데 배치 */
+.boxA, .box3, .box4, .copyright, .box6 {width: 1140px;
+    margin: 0 auto;}
+}
+
+
+
+
+
+
+

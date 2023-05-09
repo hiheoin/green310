@@ -1,0 +1,103 @@
+@charset 'utf-8';
+
+* {margin: 0;
+    padding: 0;}
+ul,ol {list-style: none;}
+a {color: #000;
+    text-decoration: none;}
+img {border: none;
+    vertical-align: bottom;}
+body {font-family: '맑은고딕', 'Apple SD Gothic Neo', sans-serif;}
+
+
+/* 로고 설정 */
+.logo {}
+.logo a {width: 250px;
+            height: 33px;}
+.logo a img {}
+
+
+/* 메뉴 설정 */
+.menu {}
+.menu ul {}
+.menu ul li {}
+.menu ul li a {display: block;
+            padding: 10px 15px;
+            font-size: 14px;}
+.menu ul li a:hover {background-color: #fff;}
+
+
+/* topimg 설정 */
+.topimg {max-width: 100%;
+        height: auto;}
+
+        
+/* 공지사항 설정 */
+.notice {}
+.notice ul {}
+.notice ul li {}
+.notice span {}
+.notice ul li div {}
+
+
+/* SNS 설정 */
+.snsSet {}
+.snsSet ul {}
+.snsSet ul li {}
+.snsSet ul li a {}
+.snsSet i {}
+.snsSet
+
+/* 박스6 가로정렬 */
+.box6 {display: flex;}
+
+
+
+/* 공지사항과 sns 가로정렬 */
+.box4 {display: flex;}
+
+
+
+
+
+/* 미디어쿼리 구간 설정 ///////////////////// */
+
+
+/* 599px 이하 ///////// */
+@media(max-width:599px) {}
+
+
+
+/* 767px 이하 ///////// */
+@media(max-width:767px) {}
+
+
+
+/* 768px 이상 ///////// */
+@media(min-width:767px) {
+
+    /* 로고와 메뉴 가로정렬 */
+.boxA {display: flex;
+    justify-content: space-between;
+    }
+
+.menu ul {display: flex;}
+
+/* 박스6 가로정렬 */
+.box6 {display: flex;}
+
+
+}
+
+
+
+/* 1190px 이상 ///////// */
+@media(min-width:1190px) {
+
+      /* 레이아웃의 전체너비를 고정하고 가운데 배치 */
+.boxA, .box3, .box4, .copyright, .box6 {width: 1140px;
+    margin: 0 auto;}
+
+}
+
+

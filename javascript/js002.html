@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트_객체</title>
+</head>
+<body>
+    <h1>자바스크립트_객체</h1>
+    <p id="txt">요소를 불러내는 추상적인 형태 - 객체 <br>
+        요소 - element</p>
+    <ul class="box">
+        <li>id선택 - getElementById('아이디이름')</li>
+        <li>태그명 - getElementsByTagName('태그이름')</li>
+        <li>클래스명 - getElementsByClassName('클래스이름')</li>
+                    <!-- 복수일 때 Element's'라서 태그랑 클래스는 s 붙음 -->
+    </ul>
+
+    <script>
+        const txt = document.getElementById('txt') //바뀔 일이 없는 이름이기 때문에 let 대신 const 씀
+        
+        document.getElementById('txt').style.color = 'red'
+        
+        txt.style.color = 'red' // 변수화 시키면 간단하게 쓸 수 있음
+        txt.textContent = '연습용입니다.'
+        txt.style.display = 'none'
+
+        // 만약 [0] 이렇게 쓰이면 대괄호([0])는 순번 나타내는 거
+        // 만약 getElementsByTagName을 쓸 경우에는 순번 써주기 getElementsByTagName('h1')[0] 이렇게!
+
+    </script>
+
+
+
+</body>
+</html>

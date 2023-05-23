@@ -108,8 +108,8 @@ article:nth-child(3) .txt i {right: 20px;}
 article:nth-child(3) .txt {background-color: #bff7fa;}
 article:nth-child(11) .txt {background-color: #e3f1fb;}
 
-article .txt p {position: relative
-        ;       z-index: 1;}
+article .txt p {position: relative;
+                z-index: 1;}
 
 
 

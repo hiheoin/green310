@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트_조건문</title>
+</head>
+<body>
+    <h1>자바스크립트_조건문 : 성적표만들기</h1>
+    <p>문제 : 과학, 수학, 영어, 국어 총 4개의 점수를 묻고, 총점을 내고 평균을 내서 <br>
+        평균값이 90점 이상 A, 80점 이상 B, 70점 이상 C, 60점 이상 D 그 이하는 F학점으로 출력한다.</p>
+    
+        <div class="box1">
+            당신의 총점은 <span id="add">00</span> 입니다.
+        </div>
+        <div class="box2">
+            당신의 평균점수는 <span id="ave">00</span> 입니다.
+        </div>
+        <div class="box3">
+            당신의 학점은 <span id="cre">00</span> 입니다.
+        </div>
+
+<style>
+
+    .box1 {background-color: skyblue;
+            padding: 30px;
+            text-align: center;
+            font-size: 28px;}
+    .box1 span {color: salmon;
+                font-weight: bold;}
+    .box2 {background-color: darkcyan;
+            padding: 30px;
+            text-align: center;
+            font-size: 28px;}
+    .box2 span {color: lightgoldenrodyellow;
+                font-weight: bold;}
+    .box3 {background-color: lightgoldenrodyellow;
+            padding: 30px;
+            text-align: center;
+            font-size: 28px;}
+    .box3 span {color: darkcyan;
+                font-weight: bold;}
+
+</style>
+
+
+<script>
+
+    let sci = Number(prompt('당신의 과학 점수를 입력하세요.'))
+    let mat = Number(prompt('당신의 수학 점수를 입력하세요.'))
+    let eng = Number(prompt('당신의 영어 점수를 입력하세요.'))
+    let kor = Number(prompt('당신의 국어 점수를 입력하세요.'))
+
+    let add = sci+mat+eng+kor;
+
+    let addRe = document.getElementById('add');
+
+    addRe.textContent=add;
+
+    let ave = add/4;
+
+    let aveRe = document.getElementById('ave');
+
+    aveRe.textContent=ave;
+
+    let creRe = document.getElementById('cre');
+
+    if(ave>89){
+        creRe.textContent='A'
+    }else if(ave>79){
+        creRe.textContent='B'
+    }else if(ave>69){
+        creRe.textContent='C'
+    }else if(ave>59){
+        creRe.textContent='D'
+    }else{
+        creRe.textContent='F'
+    }
+
+
+
+
+
+</script>
+
+
+
+
+
+</body>
+</html>

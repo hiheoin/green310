@@ -66,13 +66,15 @@
 
     let creRe = document.getElementById('cre');
 
-    if(ave>89){
+    // 조건문 생성
+
+    if(ave>=90){
         creRe.textContent='A'
-    }else if(ave>79){
+    }else if(ave<90 && ave>=80){
         creRe.textContent='B'
-    }else if(ave>69){
+    }else if(ave<80 && ave>=70){
         creRe.textContent='C'
-    }else if(ave>59){
+    }else if(ave<70 && ave>=60){
         creRe.textContent='D'
     }else{
         creRe.textContent='F'

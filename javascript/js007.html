@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트_이벤트</title>
+
+    <script>
+        window.onload = function(){
+        // 윈도우부터 읽고 일을 수행해라(스크립트를 위에 쓸 때)
+            const btn = document.getElementById('btn');
+            const ti1 = document.getElementById('ti1'),
+                list = document.querySelector('ul'),
+                listli = document.querySelectorAll('li')
+                // 쿼리 셀렉터는 1개만 가져오는 것, 그래서 첫번째 li만 가져옴, 그래서 All을 붙여줌
+            
+
+            // const li1 = document.getElementById('li1');
+            // const li2 = document.getElementById('li2');
+            // const li3 = document.getElementById('li3');
+            // const li4 = document.getElementById('li4');
+            // const li5 = document.getElementById('li5');
+            // const li6 = document.getElementById('li6');
+            // const li7 = document.getElementById('li7');
+                
+
+            const li1 = list.children[0],
+                li2 = list.children[1],
+                li3 = list.children[2],
+                li4 = document.getElementById('li4'),
+                li5 = document.getElementById('li5'),
+                li6 = document.getElementById('li6'),
+                li7 = document.getElementById('li7')
+
+                li1.onmouseenter = function(){
+                    li1.style.backgroundColor='red'
+                }
+                li2.onmouseenter = function(){
+                    li1.style.backgroundColor='orange'
+                    li2.style.backgroundColor='orange'
+                }
+                li3.onmouseenter = function(){
+                    li1.style.backgroundColor='yellow'
+                    li2.style.backgroundColor='yellow'
+                    li3.style.backgroundColor='yellow'
+                }
+                li4.onmouseenter = function(){
+                    li1.style.backgroundColor='green'
+                    li2.style.backgroundColor='green'
+                    li3.style.backgroundColor='green'
+                    li4.style.backgroundColor='green'
+                }
+                li5.onmouseenter = function(){
+                    li1.style.backgroundColor='blue'
+                    li2.style.backgroundColor='blue'
+                    li3.style.backgroundColor='blue'
+                    li4.style.backgroundColor='blue'
+                    li5.style.backgroundColor='blue'
+                }
+                li6.onmouseenter = function(){
+                    li1.style.backgroundColor='navy'
+                    li2.style.backgroundColor='navy'
+                    li3.style.backgroundColor='navy'
+                    li4.style.backgroundColor='navy'
+                    li5.style.backgroundColor='navy'
+                    li6.style.backgroundColor='navy'
+                }
+                li7.onmouseenter = function(){
+                    li1.style.backgroundColor='purple'
+                    li2.style.backgroundColor='purple'
+                    li3.style.backgroundColor='purple'
+                    li4.style.backgroundColor='purple'
+                    li5.style.backgroundColor='purple'
+                    li6.style.backgroundColor='purple'
+                    li7.style.backgroundColor='purple'
+                };
+
+                list.onmouseout = function(){
+                    li1.style.backgroundColor='transparent'
+                    li2.style.backgroundColor='transparent'
+                    li3.style.backgroundColor='transparent'
+                    li4.style.backgroundColor='transparent'
+                    li5.style.backgroundColor='transparent'
+                    li6.style.backgroundColor='transparent'
+                    li7.style.backgroundColor='transparent'
+                };
+
+
+            btn.onclick = function(){
+                alert('클릭하셨습니다.')
+            };
+
+            ti1.onmouseenter = function(){
+                ti1.style.backgroundColor='red'
+            };
+            ti1.onmouseout = function(){
+                ti1.style.backgroundColor='transparent'
+            };
+
+            // li1.onmouseenter = function(){
+            //     li1.style.backgroundColor='red'
+            // };
+            // li1.onmouseout = function(){
+            //     li1.style.backgroundColor='transparent'
+            // };
+
+            // li2.onmouseenter = function(){
+            //     li1.style.backgroundColor='orange'
+            //     li2.style.backgroundColor='orange'
+            // };
+            // li2.onmouseout = function(){
+            //     li1.style.backgroundColor='transparent'
+            //     li2.style.backgroundColor='transparent'
+            // };
+
+            // li3.onmouseenter = function(){
+            //     li1.style.backgroundColor='yellow'
+            //     li2.style.backgroundColor='yellow'
+            //     li3.style.backgroundColor='yellow'
+            // };
+            // li3.onmouseout = function(){
+            //     li1.style.backgroundColor='transparent'
+            //     li2.style.backgroundColor='transparent'
+            //     li3.style.backgroundColor='transparent'
+            // };
+
+            // li4.onmouseenter = function(){
+            //     li1.style.backgroundColor='green'
+            //     li2.style.backgroundColor='green'
+            //     li3.style.backgroundColor='green'
+            //     li4.style.backgroundColor='green'
+            // };
+            // li4.onmouseout = function(){
+            //     li1.style.backgroundColor='transparent'
+            //     li2.style.backgroundColor='transparent'
+            //     li3.style.backgroundColor='transparent'
+            //     li4.style.backgroundColor='transparent'
+            // };
+
+            // li5.onmouseenter = function(){
+            //     li1.style.backgroundColor='blue'
+            //     li2.style.backgroundColor='blue'
+            //     li3.style.backgroundColor='blue'
+            //     li4.style.backgroundColor='blue'
+            //     li5.style.backgroundColor='blue'
+            // };
+            // li5.onmouseout = function(){
+            //     li1.style.backgroundColor='transparent'
+            //     li2.style.backgroundColor='transparent'
+            //     li3.style.backgroundColor='transparent'
+            //     li4.style.backgroundColor='transparent'
+            //     li5.style.backgroundColor='transparent'
+            // };
+
+            // li6.onmouseenter = function(){
+            //     li1.style.backgroundColor='navy'
+            //     li2.style.backgroundColor='navy'
+            //     li3.style.backgroundColor='navy'
+            //     li4.style.backgroundColor='navy'
+            //     li5.style.backgroundColor='navy'
+            //     li6.style.backgroundColor='navy'
+            // };
+            // li6.onmouseout = function(){
+            //     li1.style.backgroundColor='transparent'
+            //     li2.style.backgroundColor='transparent'
+            //     li3.style.backgroundColor='transparent'
+            //     li4.style.backgroundColor='transparent'
+            //     li5.style.backgroundColor='transparent'
+            //     li6.style.backgroundColor='transparent'
+            // };
+
+            // li7.onmouseenter = function(){
+            //     li1.style.backgroundColor='purple'
+            //     li2.style.backgroundColor='purple'
+            //     li3.style.backgroundColor='purple'
+            //     li4.style.backgroundColor='purple'
+            //     li5.style.backgroundColor='purple'
+            //     li6.style.backgroundColor='purple'
+            //     li7.style.backgroundColor='purple'
+            // };
+            // li7.onmouseout = function(){
+            //     li1.style.backgroundColor='transparent'
+            //     li2.style.backgroundColor='transparent'
+            //     li3.style.backgroundColor='transparent'
+            //     li4.style.backgroundColor='transparent'
+            //     li5.style.backgroundColor='transparent'
+            //     li6.style.backgroundColor='transparent'
+            //     li7.style.backgroundColor='transparent'
+            // };
+
+
+            // let list = {
+            //     li1 : document.getElementById('li1'),
+            //     li2 : document.getElementById('li2'),
+            //     li3 : document.getElementById('li3'),
+            //     li4 : document.getElementById('li4'),
+            //     li5 : document.getElementById('li5'),
+            //     li6 : document.getElementById('li6'),
+            //     li7 : document.getElementById('li7')
+            // }
+
+            // list.li1.onmouseenter = function(){
+            //     list.li1.style.backgroundColor='red';
+            // }
+            // list.li1.onmouseout = function(){
+            //     list.li1.style.backgroundColor='transparent';
+            // }
+
+            // list.li2.onmouseenter = function(){
+            //     list['li1','li2'].style.backgroundColor='orange';
+            // } 
+            // list.li2.onmouseout = function(){
+            //     list['li1','li2'].style.backgroundColor='transparent';
+            // }
+
+
+
+
+
+        }
+    </script>
+
+
+</head>
+<body>
+    <h1 id="ti1">자바스크립트_이벤트</h1>
+    <p>이벤트는 키보드를 누르거나 마우스를 클릭하는 것처럼 어떤 현상이 프로그램에 영향을 미치는 것을 말한다.</p>
+    <ul>
+        <li id="li1">마우스 이벤트 </li>
+        <li id="li2">키보드 이벤트</li>
+        <li id="li3">HTML 프레임 이벤트</li>
+        <li id="li4">HTML 입력양식 이벤트</li>
+        <li id="li5">사용자 인터페이스 이벤트</li>
+        <li id="li6">구조변화 이벤트</li>
+        <li id="li7">터치 이벤트</li>
+    </ul>
+    <p>작성법 <br>
+        일반적인 방식 : window.onload = function(){실행문}</p>
+    <p>설명 - window는 선택자의 자리, onload는 이벤트속성이라는 이름으로 on을 제외한 load가 이벤트 이름 또는 이벤트 타입이라 불린다.<br>
+        - 이벤트 속성에 넣는 함수를 이벤트리스너 또는 이벤트핸들러 라고 한다.</p>
+
+        <button id="btn">click</button>
+
+    <h2>추가 선택자</h2>
+    <p>id값을 매번 html 요소에 추가하는데 불편함이 있는 getElementById값 대신에 querySelector 또는 querySelectorAll이라는 객체로 불러낼 수 있다. <br>
+        이때, querySelector는 html태그 중 중복요소가 있을 시 맨 처음에 있는 요소만 부르고, querySelectorAll은 모든 요소를 부른다.</p>
+    
+
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나이키</title>
+    <!-- 외부스타일시트 연결 -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- 학습내용
+    1. 동영상 삽입 학습
+    2. gradient 학습
+    3. animation 학습 : 어포던스(동작을 유도하다)
+    4. transform : 2D 학습 (translate:이동, skew:기울임)
+    5. transition 학습 : 마우스오버시 전환효과 구현 학습
+    -->
+    <!-- 폰트어썸 CDN 연결 -->
+    <script src="https://kit.fontawesome.com/fdff7e00bc.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- 로고 -->
+    <h1><img src="img/logo2.png" alt=""></h1>
+
+    <!-- 배경 동영상 -->
+    <div class="vid">
+        <video autoplay loop muted> <!-- 뮤트는 간혹 오토플레이 안 될 때--> 
+            <!-- loop or loop="loop" : 무한, 횟수로도 가능 -->
+            <source src="img/nike.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- header -->
+    <header>
+        <ul class="gnb">
+            <li><a href="#"><em>About NIKE</em></a>
+                <ul>
+                    <li><a href="#"><em>submenu</em></a></li>
+                </ul>
+            </li>
+            <li><a href="#"><em>Brand Info</em></a>
+                <ul>
+                    <li><a href="#"><em>submenu</em></a></li>
+                    <li><a href="#"><em>submenu</em></a></li>
+                    <li><a href="#"><em>submenu</em></a></li>
+                    <li><a href="#"><em>submenu</em></a></li>
+                </ul>
+            </li>
+            <li><a href="#"><em>Community</em></a>
+                <ul>
+                    <li><a href="#"><em>submenu</em></a></li>
+                    <li><a href="#"><em>submenu</em></a></li>
+                    <li><a href="#"><em>submenu</em></a></li>
+                </ul>
+            </li>
+            <li><a href="#"><em>Product Value</em></a>
+                <ul>
+                    <li><a href="#"><em>submenu</em></a></li>
+                    <li><a href="#"><em>submenu</em></a></li>
+                </ul>
+            </li>
+            <li><a href="#"><em>Company History</em></a>
+                <ul>
+                    <li><a href="#"><em>submenu</em></a></li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+
+    <!-- snsSet 박스 -->
+    <ul class="snsSet">
+        <li><a href="#"><i class="fa fa-facebook fa-fw" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter fa-fw" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-youtube fa-fw" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-instagram fa-fw" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-android fa-fw" aria-hidden="true"></i></a></li>
+    </ul>
+
+    <!-- hero 텍스트 박스 -->
+    <section>
+        <p>50<em>/24</em></p>
+        <p>Best Qualified <b>AIR MAX</b></p>
+    </section>
+
+    <!-- 사이드메뉴 -->
+    <aside class="side">
+        <div class="con">
+            <p><em>Event & Community</em>
+                <img src="img/pic1.png" alt="">
+            </p>
+            <p><em>News & Notice</em>
+                <img src="img/pic2.png" alt="">
+            </p>
+            <p><em>Product Review</em>
+                <img src="img/pic3.png" alt="">
+            </p>
+        </div>
+        <div class="btn"></div>
+    </aside>
+
+
+</body>
+</html>

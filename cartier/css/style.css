@@ -67,8 +67,10 @@ article {float: right;
         background-repeat: no-repeat;
         background-position: left center;
         transition: all 0.8s;
-        position: relative;}
-article:hover {width: 35%;}
+        position: relative;
+        overflow: hidden;}
+/* article:hover {width: 35%;} -> 제이쿼리로 구현함 */
+/* 중복 적용되면 에러 뜨기 때문에 호버값 지워준 것 */
 article h2 {position: absolute;
             top: 350px;
             left: 20px;
@@ -77,6 +79,65 @@ article h2 {position: absolute;
             font-weight: bold;
             color: #666;
             border-left: 3px solid #555;
-            padding-left: 15px;}
+            padding-left: 15px;
+                z-index: 10;}
+
+article video {position: absolute;
+                left: -100px;
+                top: 0;
+                height: 100%;
+                width: auto;
+                z-index: 1;
+                /* 부드럽게 전환 */
+                transition: all 0.8s;/*display:none의 경우는 부드러운 전환이 안 됨 그래서 opacity로 안 보이게 한 것*/
+                opacity: 0;}
+/* article 내부에 타이틀 박스 설정 */
+article div {position: absolute;
+                top: 350px;
+                transition: all 1.2s;
+                width: 100%;
+                height: 0;
+                background-color: black;
+                z-index: 2;}
+
+article:hover div {top: 325px;
+                height: 70px;}
+article:hover h2 {color: #fff;
+        border-left: 3px solid #fff;}
+
+/* article aside {position: absolute;
+                bottom: 50px;
+                right: -500px;
+                width: 350px;
+                height: auto;
+                color: #fff;
+                text-align: right;
+                transition: all 1.2s;
+                z-index: 3;}
+article aside h3 {font-size: 50px;}
+article aside p {font: 20px;}
+
+article:hover aside {right: 40px;} */
 
 
+article h3 {position: absolute;
+        color: #fff;
+        width: 350px;
+        right: -800px;
+        bottom: 200px;
+        font-size: 50px;
+        transition: all 0.8s;
+        z-index: 3;
+text-align: right;}
+article p {position: absolute;
+        color: #fff;
+        width: 350px;
+        right: -800px;
+        bottom: 50px;
+        font: 20px;
+        transition: all 1.2s;
+        z-index: 3;
+text-align: right;}
+
+article:hover h3 {right: 25px;}
+article:hover p {right: 25px;}

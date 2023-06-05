@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>트랜스폼_3D</title>
+</head>
+<body>
+    
+    <h1>transform_3D</h1>
+    <p>2D에서 3D로 변환시 가장 중요한 속성은 원근감이다.<br>
+    원근감 : perspective </p>
+    <p>사용법 <br>
+    부모자에 원근값수치 작성 (단위포함) <br>
+    perspective : 수치px</p>
+    <p>주의사항 : 수치가 작을수록 왜곡이 커지며 수치가 커질수록 왜곡이 적어진다</p>
+
+    <h2>예제</h2>
+    <section class="d">
+        <div>
+            <p></p>
+        </div>
+        <div>
+            <p></p>
+        </div>
+        <div>
+            <p></p>
+        </div>
+    </section>
+
+    <section class="a">
+        <article>
+            <p></p>
+            <p></p>
+        </article>
+    </section>
+
+    <section class="b">
+        <article>
+            <p></p>
+            <p></p>
+        </article>
+    </section>
+
+    <section class="c">
+        <article>
+        </article>
+    </section>
+
+<style>
+
+    section {margin-bottom: 50px;}
+
+    .d {margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 50px;}
+    .d div {width: 200px;
+                height: 200px;
+                border: 1px solid #000;}
+    .d div:nth-child(1) {perspective: 150px;}
+    .d div:nth-child(3) {perspective: 800px;}
+
+    .d div p {margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                background-color: aqua;
+                opacity: 0.5;
+                transform: rotateX(50deg);}
+
+
+    .a article {width: 800px;
+                    height: 600px;
+                    border: 1px solid #000;
+                    display: flex;
+                    perspective: 200px;
+                    margin: 0 auto;}
+    .a article p {width: 50%;
+                    height: 100%;
+                    background-color: salmon;
+                    opacity: 0.8;
+                    margin: 0;
+                    transition: all 0.8s;
+                    }
+                    /* 기준점 설정 : transform-origin */
+    .a article p:nth-child(1) {transform-origin: left top;}
+    .a article p:nth-child(2) {transform-origin: right top;}
+    .a article:hover p:nth-child(1) {transform: rotateY(60deg);}
+    .a article:hover p:nth-child(2) {transform: rotateY(-60deg);}
+
+
+    .b article {width: 800px;
+                    height: 600px;
+                    border: 1px solid #000;
+                    perspective: 900px;
+                    background-color: sandybrown;
+                    margin: 0 auto;}
+    .b article p {width: 100%;
+                    height: 50%;
+                    background-color: palevioletred;
+                    margin: 0;
+                    transition: all 0.8s;
+                    }
+                    /* 기준점 설정 : transform-origin */
+    .b article p:nth-child(1) {transform-origin: top;}
+    .b article p:nth-child(2) {transform-origin: bottom;}
+    .b article:hover p:nth-child(1) {transform: rotateX(60deg);}
+    .b article:hover p:nth-child(2) {transform: rotateX(-60deg);}
+
+    .c {width: 400px;
+        height: 400px;
+        border: 1px solid #000;
+        perspective: 800px;
+        margin: 0 auto;
+        margin-bottom: 50px;}
+    .c article {width: 100%;
+                    height: 100%;
+                    background-color: palevioletred;
+                    margin: 0;
+                    transition: all 0.8s;}
+    .c article {transform-origin: center;}
+    .c:hover article {transform: rotateX(360deg);}
+
+
+
+</style>
+
+
+
+
+
+
+
+</body>
+</html>

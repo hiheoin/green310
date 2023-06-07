@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sample01</title>
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+
+$(document).ready(function(){
+
+    // 메뉴 버튼을 클릭했을 때, nav와 section이 바뀌어라
+
+    $('#wrap em').click(function(){
+
+        $('#wrap nav').addClass('on')
+        $('#wrap section').addClass('on')
+
+        // 본인은 서서히 사라져라
+
+        $(this).fadeOut(800)
+
+    })
+
+
+
+})
+
+
+    </script>
+</head>
+<body>
+    
+    <div id="wrap">
+        <em></em>
+        <nav></nav>
+        <section>
+            <div class="homme"></div>
+            <div class="girl"></div>
+            <div class="kids"></div>
+        </section>
+    </div>
+
+
+
+<style>
+
+* {margin: 0;
+    padding: 0;}
+ul,ol {list-style: none;}
+a {color: #000;
+    text-decoration: none;}
+img {vertical-align: bottom;}
+
+
+#wrap {width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: black;
+    left: 0;
+    top: 0;
+    perspective: 900px;}
+
+#wrap em {width: 50px;
+        height: 50px;
+        position: fixed;
+        left: 40px;
+        top: 50px;
+        background-color: chartreuse;
+        z-index: 999;}
+
+#wrap nav {width: 150px;
+        height: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 10;
+        background-color: salmon;
+        transform-origin: left;
+        transition: all 0.8s;
+        opacity: 0;
+        transform: rotateY(120deg);}
+
+#wrap section {width: 100%;
+        height: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        background-color: thistle;
+        transform-origin: right;
+        transition: all 0.5s;}
+
+#wrap nav.on {transform: rotateY(15deg);
+            opacity: 1;}
+#wrap section.on {transform: rotateY(-8deg);}
+
+
+
+
+</style>
+
+</body>
+</html>

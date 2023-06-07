@@ -1,8 +1,60 @@
 @charset 'utf-8';
 
+/* 전체설정 */
 * {margin: 0;
     padding: 0;}
 ul,ol {list-style: none;}
 a {color: #000;
     text-decoration: none;}
 img {vertical-align: bottom;}
+
+
+/* 전체화면 설정 */
+#wrap {width: 100%;
+    min-width: 1024px;
+    min-height: 768px;
+    /* 레이아웃이 틀어짐을 방지하고 일정 넓이와 높이 이하로는 콘텐츠가 줄어들지 않도록 설정하기위해 최소값을 정해준다 */
+    height: 100%;
+    /* height 100%는 포지션 fixed 혹은 부모자의 값 받아올 때 아니면 안 씀 (화면 꽉 채울 때 그냥 쓰고 싶으면 100vh) */
+    background-color: black;
+    position: fixed;
+    left: 0;
+    top: 0;
+    /* 포지션 쓸 때는 무조건 lift top 써주기 */
+    perspective: 900px;}
+
+/* 메뉴버튼 설정 */
+#wrap em {width: 50px;
+        height: 50px;
+        background-color: aqua;
+        position: fixed;
+        left: 40px;
+        top: 50px;
+        z-index: 999;}
+
+/* 내비 설정 */
+#wrap nav {width: 150px;
+            height: 100%;
+            position: fixed;
+            left: 0;
+            top: 0;
+            background-color: #eee;
+            z-index: 10;
+            transform-origin: left;
+            transition: all 0.8s;
+            opacity: 0;
+            transform: rotateY(120deg);}
+
+/* 섹션 설정 */
+#wrap section {width: 100%;
+                height: 100%;
+                position: fixed;
+                background-color: skyblue;
+                z-index: 1;
+                transform-origin: right;
+                transition: all 0.5s;}
+
+/* 변환모습 */
+#wrap nav.on {transform: rotateY(15deg);
+            opacity: 1;}
+#wrap section.on {transform: rotateY(-8deg);}

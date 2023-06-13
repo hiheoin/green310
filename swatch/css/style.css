@@ -1,0 +1,85 @@
+@charset 'utf-8';
+
+/* 전체설정 */
+* {margin: 0;
+    padding: 0;}
+ul,ol {list-style: none;}
+a {color: #000;
+    text-decoration: none;}
+img {vertical-align: bottom;}
+
+
+/* 로고 설정 */
+h1 {position: fixed;
+    font-size: 50px;
+    left: 50px;
+    top: 50px;
+    z-index: 999;}
+
+/* 내비 설정 */
+nav {position: fixed;
+    top: 50%;
+    left: 50px;
+    margin-top: -120px;
+    z-index: 999;}
+nav ul {}
+nav ul li {margin-bottom: 2px;}
+nav ul li a {display: flex;
+            width: 200px;
+            height: 60px;
+            font-size: 14px;
+            align-items: center;
+            justify-content: flex-end;
+            border-bottom: 2px solid red;
+            transition: all 0.8s;}
+nav ul li a:hover {border-color: black;
+                    color: red;}
+nav ul li.on a {border-color: black;
+                        color: red;}
+
+/* 섹션 설정 */
+#wrap {}
+section {width: 100%;
+        height: 700px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: right center;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;}
+section:nth-child(1) {background-image: url(../img/bg1.jpg);}
+section:nth-child(2) {background-image: url(../img/bg2.jpg);}
+section:nth-child(3) {background-image: url(../img/bg3.jpg);}
+section:nth-child(4) {background-image: url(../img/bg4.jpg);}
+
+
+/* 섹션별 움직이는 이미지 */
+section img {position: absolute;}
+
+    /* 첫 번째 섹션 */
+.p11 {right: 20px;
+    bottom: 20px;}
+.p12 {right: 130px;
+    bottom: -40px;}
+.p13 {right: 60px;
+    top: 180px;}
+
+    /* 두 번째 섹션 */
+.p21 {right: -200px;
+    bottom: -500px;}
+.p22 {right: 100px;
+    bottom: -15px;}
+
+    /* 세 번째 섹션 */
+.p31 {right: 100px;
+    bottom: -50px;}
+.p32 {right: 130px;
+    bottom: -300px;}
+.p33 {right: -10px;
+    top: 200px;}
+
+    /* 네 번째 섹션 */
+.p41 {right: -100px;
+    bottom: -100px;}
+.p42 {right: 100px;
+    bottom: -100px;}

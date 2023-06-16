@@ -1,0 +1,153 @@
+@charset 'utf-8';
+
+/* 전체설정 */
+* {margin: 0;
+    padding: 0;}
+ul,ol {list-style: none;}
+a {color: #000;
+    text-decoration: none;}
+img {vertical-align: bottom;}
+
+
+body {width: 100%;
+    height: 4000px;
+    background-color: #ddd;}
+
+
+/* 로고 설정 */
+h1 {position: fixed;
+    font-size: 50px;
+    right: 20px;
+    top: 20px;
+    text-indent: -9999px;
+    width: 200px;
+    height: 170px;
+    background-image: url(../img/logo.png);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    box-shadow: 5px 5px 5px #888;}
+
+
+/* 내비 설정 */
+nav {position: fixed;
+    left: 20px;
+    top: 20%;}
+nav ul {display: flex;}
+nav ul li {margin-right: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            color: #fff;}
+nav ul li:hover {color: #000;}
+
+
+/* 섹션 설정 */
+section {position: fixed;
+        /*background-color: aqua;*/}
+article {width: 180px;
+        height: 400px;
+        margin: 10px;
+        background-color: #fff;
+        float: left;
+        opacity: 0.5;
+        transition: opacity 0.8s;
+        box-shadow: 5px 5px 5px #000;}
+        /* x축(오른쪽으로) y축(아래쪽으로) 번짐(블러)  */
+
+article:hover {opacity: 1;}
+
+article h2 {background-color: #888;
+            cursor: pointer;
+            text-align: center;
+            padding: 10px 0;
+            transition: all 0.8s;}
+
+article h2:hover {text-shadow: 5px 5px 0 #fff;
+                box-shadow: 0 5px 5px #000;}
+
+article:nth-child(1) {background-image: url(../img/pic1.jpg);
+                    background-size: cover;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    }
+article:nth-child(2) {background-image: url(../img/pic2.jpg);
+                        background-size: cover;
+                        background-position: center center;
+                        background-repeat: no-repeat;}
+article:nth-child(3) {background-image: url(../img/pic3.jpg);
+                            background-size: cover;
+                            background-position: center center;
+                            background-repeat: no-repeat;}
+article:nth-child(4) {background-image: url(../img/pic4.jpg);
+                                background-size: cover;
+                                background-position: center center;
+                                background-repeat: no-repeat;}
+article:nth-child(5) {background-image: url(../img/pic5.jpg);
+                                    background-size: cover;
+                                    background-position: center center;
+                                    background-repeat: no-repeat;}
+article:nth-child(6) {background-image: url(../img/pic6.jpg);
+                                        background-size: cover;
+                                        background-position: center center;
+                                        background-repeat: no-repeat;}
+article:nth-child(7) {background-image: url(../img/pic7.jpg);
+                    background-size: cover;
+                    background-position: center center;
+                    background-repeat: no-repeat;}
+article:nth-child(8) {background-image: url(../img/pic8.jpg);
+                        background-size: cover;
+                        background-position: center center;
+                        background-repeat: no-repeat;}
+article:nth-child(9) {background-image: url(../img/pic9.jpg);
+                            background-size: cover;
+                            background-position: center center;
+                            background-repeat: no-repeat;}
+article:nth-child(10) {background-image: url(../img/pic10.jpg);
+                                background-size: cover;
+                                background-position: center center;
+                                background-repeat: no-repeat;}
+article:nth-child(11) {background-image: url(../img/pic11.jpg);
+                    background-size: cover;
+                    background-position: center center;
+                    background-repeat: no-repeat;}
+article:nth-child(12) {background-image: url(../img/pic12.jpg);
+                        background-size: cover;
+                        background-position: center center;
+                        background-repeat: no-repeat;}
+article:nth-child(13) {background-image: url(../img/pic13.jpg);
+                            background-size: cover;
+                            background-position: center center;
+                            background-repeat: no-repeat;}
+article:nth-child(14) {background-image: url(../img/pic14.jpg);
+                                background-size: cover;
+                                background-position: center center;
+                                background-repeat: no-repeat;}
+article:nth-child(15) {background-image: url(../img/pic15.jpg);
+                                    background-size: cover;
+                                    background-position: center center;
+                                    background-repeat: no-repeat;}
+article:nth-child(16) {background-image: url(../img/pic16.jpg);
+                                        background-size: cover;
+                                        background-position: center center;
+                                        background-repeat: no-repeat;}
+article:nth-child(17) {background-image: url(../img/pic17.jpg);
+                    background-size: cover;
+                    background-position: center center;
+                    background-repeat: no-repeat;}
+article:nth-child(18) {background-image: url(../img/pic18.jpg);
+                        background-size: cover;
+                        background-position: center center;
+                        background-repeat: no-repeat;}
+article:nth-child(19) {background-image: url(../img/pic19.jpg);
+                            background-size: cover;
+                            background-position: center center;
+                            background-repeat: no-repeat;}
+article:nth-child(20) {background-image: url(../img/pic20.jpg);
+                                background-size: cover;
+                                background-position: center center;
+                                background-repeat: no-repeat;}
+
+
+
+
